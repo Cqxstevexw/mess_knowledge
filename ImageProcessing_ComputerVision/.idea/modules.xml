@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/ImageProcessingProject.iml" filepath="$PROJECT_DIR$/.idea/ImageProcessingProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/ImageProcessing_ComputerVision.iml" filepath="$PROJECT_DIR$/.idea/ImageProcessing_ComputerVision.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../firstBook/.idea/firstBook.iml" filepath="$PROJECT_DIR$/../firstBook/.idea/firstBook.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../thirdBook/.idea/thirdBook.iml" filepath="$PROJECT_DIR$/../thirdBook/.idea/thirdBook.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../work1/.idea/work1.iml" filepath="$PROJECT_DIR$/../work1/.idea/work1.iml" />
+    </modules>
+  </component>
+</project>
