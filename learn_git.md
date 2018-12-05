@@ -27,7 +27,7 @@
 >+ git ls-files 查看已提交的文件
 >+ git rm 文件名  删除本地仓库的某个文件，后面还需要用commit提交一下
 >+ git mv oldName newName    用于修改本地仓库的文件名，后面还需要用commit提交一下
->+ git checkout -- 文件名 撤销在工作区的修改
+>+ git checkout -- 文件名 撤销在工作区的修改(如果要撤销的文件和分支名不冲突，可以省略 -- )
 >+ git reflog  查看历史版本 配合 git reset --hard 历史版本 回到指定的历史版本（本地数据会被销毁）
 >+ git remote -v 这个命令可以显示对应项目的远程克隆地址
 
@@ -86,6 +86,15 @@ rebase不要谁便用，容易发生冲突。因为是将你的分支接到maste
 >- git push origin tagname 上传一个   上传所有tag: git push origin --tags 默认是不上传的
 
  **************************
+
+##### 8 错操作
+> 比如 删除本地的A文件，修改了B文件，然后push到远程，然后继续修改B文件上传，这个时候提MR被打回，要你恢复A文件再把修改好的文件B一起提MR。
+
+做法：
+>+ 先 git reset 删除A文件__前__一个版本（默认是使用soft，不要使用hard，可能会有数据丢失）
+>+ 然后 git checkout -- A文件 
+>+ 然后 add B 文件 commit push
+>+ 会发现push失败，先检查是否文件已修改好，是的话，功能是否已实现，删除远程分支，然后再把本地分支push（必须先检查好）
 
 ##### 基础git
 >
